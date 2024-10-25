@@ -1,6 +1,6 @@
 import { getElement } from "../utils.js";
 import display from "../displayProducts.js";
-// add 'all' in the companies array and then add all the companies in the HTML
+
 const setupCompanies = (store) => {
   let companies = ["all", ...new Set(store.map((product) => product.company))];
 
@@ -23,7 +23,7 @@ const setupCompanies = (store) => {
           (product) => product.company === e.target.textContent
         );
       }
-      display(newStore, getElement(".products-container"));
+      display(newStore, getElement(".products-container"), true);
     }
   });
 };
