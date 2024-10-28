@@ -1,4 +1,3 @@
-// import
 import {
   getStorageItem,
   setStorageItem,
@@ -27,7 +26,6 @@ export const addToCart = (id) => {
     addToCartDOM(product);
   } else {
     // update values
-
     const amount = increaseAmount(id);
     const items = [...cartItemsDOM.querySelectorAll(".cart-item-amount")];
 
